@@ -7,7 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/17OL33h-2qcGrf6YvNju0A-jQlSRcyCn8
 """
 
-!conda activate main-ds
 !pip install streamlit babel
 !pip install streamlit
 
