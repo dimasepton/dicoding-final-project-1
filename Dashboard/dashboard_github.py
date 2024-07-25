@@ -1,5 +1,7 @@
+from io import StringIO
 import streamlit as st
 import pandas as pd
+import requests
 
 # Membuat header sebagai judul, subheader sebagai subjudul, dan caption
 st.header('Dashboard of Facility of Bike Sharing')
@@ -53,7 +55,13 @@ def change_season_name(df):
     df.loc[df['season'] == 4, 'season'] = "winter"
     return df
 
-# 
+def get_df_from_github(url):
+    resp = requests.get(url)
+    content = resp.content
+    csv_string_io = StringIO(content.decode("utf-8"))
+    df = pd.read_csv(csv_string_io)
+    return df
+
 def main():
     csv_url = "https://raw.githubusercontent.com/dimasepton/dicoding-final-project-1/3f9b624dfbad1b84bab5cd2569b11084570d07ac/Dashboard/hour.csv"
     df = get_df_from_github(csv_url)
