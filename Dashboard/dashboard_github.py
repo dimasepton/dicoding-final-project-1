@@ -55,7 +55,7 @@ def change_season_name(df):
 
 # 
 def main():
-    csv_url = "https://github.com/dimasepton/dicoding-final-project-1/blob/3f9b624dfbad1b84bab5cd2569b11084570d07ac/Dashboard/hour.csv"
+    csv_url = "https://raw.githubusercontent.com/dimasepton/dicoding-final-project-1/3f9b624dfbad1b84bab5cd2569b11084570d07ac/Dashboard/hour.csv"
     df = get_df_from_github(csv_url)
     
 
