@@ -53,12 +53,10 @@ def change_season_name(df):
     df.loc[df['season'] == 4, 'season'] = "winter"
     return df
 
-# 
 def main():
     csv_file = "hour.csv"
     df = get_df_from_csv(csv_file)
     
-
     options = st.multiselect(
         "What do you want to show?",
         season_list,
