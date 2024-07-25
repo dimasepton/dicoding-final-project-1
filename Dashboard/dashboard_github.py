@@ -55,8 +55,8 @@ def change_season_name(df):
 
 # 
 def main():
-    csv_file = "hour.csv"
-    df = get_df_from_csv(csv_file)
+    csv_url = "https://github.com/dimasepton/dicoding-final-project-1/blob/3f9b624dfbad1b84bab5cd2569b11084570d07ac/Dashboard/hour.csv"
+    df = get_df_from_github(csv_url)
     
 
     options = st.multiselect(
